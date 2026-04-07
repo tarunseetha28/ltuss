@@ -323,6 +323,7 @@ const Advisory = () => (
             <p className="text-xs text-muted-foreground leading-relaxed">
               Advisory interactions are handled through direct consultation, ensuring clarity, accuracy, and alignment with institutional requirements.
             </p>
+          </div>
           </FadeIn>
         </div>
       </div>
