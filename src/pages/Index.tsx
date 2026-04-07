@@ -42,11 +42,11 @@ const mailto = (subject: string) => `${MAILTO}?subject=${encodeURIComponent(subj
 /* ─── HERO — Insight Global + Accenture ─── */
 const Hero = () => (
   <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-foreground">
-    {/* Gradient abstract visual */}
+    {/* Background image */}
     <div className="absolute inset-0">
-      <div className="absolute top-0 right-0 w-[70%] h-full bg-gradient-to-bl from-primary/20 via-primary/5 to-transparent" />
+      <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" width={1920} height={1080} />
+      <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/80 to-transparent" />
       <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px]" />
-      <div className="absolute top-20 right-20 w-[300px] h-[300px] rounded-full bg-primary/8 blur-[80px]" />
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -331,19 +331,26 @@ const Advisory = () => (
 const Solutions = () => (
   <section className="py-24 md:py-32 bg-background">
     <div className="container max-w-7xl mx-auto px-6">
-      <div className="text-center mb-16">
+      <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
         <FadeIn>
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-primary" />
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">Enablement</span>
-            <div className="w-6 h-[2px] bg-primary" />
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-[2px] bg-primary" />
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">Enablement</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-4">
+              LTUSS Solutions
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Tools, systems, and operational support designed to enable efficient execution and delivery across organisational ecosystems.
+            </p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground mb-4">
-            LTUSS Solutions
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Tools, systems, and operational support designed to enable efficient execution and delivery across organisational ecosystems.
-          </p>
+        </FadeIn>
+        <FadeIn delay={0.15} direction="left">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-primary/5 rounded-2xl blur-xl" />
+            <img src={solutionsVisual} alt="Platform architecture diagram" loading="lazy" width={1024} height={1024} className="relative rounded-xl w-full max-w-sm mx-auto" />
+          </div>
         </FadeIn>
       </div>
 
@@ -469,20 +476,26 @@ const Staffing = () => (
           </FadeIn>
         </div>
 
-        {/* Visual — Stats / credibility */}
+        {/* Visual — Staffing image + Stats */}
         <FadeIn delay={0.2} direction="left">
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { num: "3", label: "Core Divisions" },
-              { num: "24h", label: "Response Time" },
-              { num: "Direct", label: "Engagement Model" },
-              { num: "E2E", label: "Workforce Support" },
-            ].map((stat) => (
-              <div key={stat.label} className="p-6 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10 text-center">
-                <div className="text-2xl font-bold text-primary font-heading mb-1">{stat.num}</div>
-                <div className="text-[10px] tracking-[0.15em] uppercase text-primary-foreground/40">{stat.label}</div>
-              </div>
-            ))}
+          <div className="space-y-6">
+            <div className="relative rounded-xl overflow-hidden">
+              <img src={staffingVisual} alt="Workforce network visualization" loading="lazy" width={1024} height={1024} className="w-full rounded-xl opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { num: "3", label: "Core Divisions" },
+                { num: "24h", label: "Response Time" },
+                { num: "Direct", label: "Engagement Model" },
+                { num: "E2E", label: "Workforce Support" },
+              ].map((stat) => (
+                <div key={stat.label} className="p-4 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10 text-center">
+                  <div className="text-xl font-bold text-primary font-heading mb-0.5">{stat.num}</div>
+                  <div className="text-[10px] tracking-[0.15em] uppercase text-primary-foreground/40">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </FadeIn>
       </div>
