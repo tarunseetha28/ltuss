@@ -1,5 +1,9 @@
 import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
+import heroBg from "@/assets/hero-bg.jpg";
+import advisoryVisual from "@/assets/advisory-visual.jpg";
+import solutionsVisual from "@/assets/solutions-visual.jpg";
+import staffingVisual from "@/assets/staffing-visual.jpg";
 import {
   ArrowRight,
   Mail,
