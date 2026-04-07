@@ -289,8 +289,11 @@ const Advisory = () => (
         {/* Right — Authority metrics */}
         <div className="lg:col-span-5">
           <FadeIn delay={0.2}>
-            <div className="bg-background border border-border rounded-lg p-8 mb-6">
-              <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-6">Advisory Focus Areas</h4>
+          <div className="space-y-6">
+            <div className="relative rounded-xl overflow-hidden">
+              <img src={advisoryVisual} alt="Advisory framework visualization" loading="lazy" width={1024} height={1024} className="w-full rounded-xl opacity-90" />
+            </div>
+            <div className="bg-background border border-border rounded-lg p-8">
               <div className="space-y-5">
                 {[
                   { label: "Education Pathway Design", strength: "92%" },
