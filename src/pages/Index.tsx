@@ -1,11 +1,11 @@
 import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
-import advisoryVisual from "@/assets/advisory-visual.jpg";
-import solutionsVisual from "@/assets/solutions-visual.jpg";
-import staffingVisual from "@/assets/staffing-visual.jpg";
-import ltussLogo from "@/assets/ltusslogo.png";
-import ltussFtrLogo from "@/assets/favicon.png";
+import heroBg from "@/assets/hero-bg.png";
+import advisoryVisual from "@/assets/advisory-visual.png";
+import solutionsVisual from "@/assets/solutions-visual.png";
+import staffingVisual from "@/assets/staffing-visual.png";
+import ltussLogo from "@/assets/newlogo.png";
+import ltussFtrLogo from "@/assets/newfav.png";
 import {
   ArrowRight,
   Mail,
@@ -69,12 +69,12 @@ const Hero = () => (
     <div className="container max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
       <div className="lg:col-span-7">
         <FadeIn>
-          <div className="flex items-center gap-3 mb-8">
+          {/* <div className="flex items-center gap-3 mb-8">
             <div className="w-8 h-[2px] bg-primary" />
             <span className="text-xs font-semibold tracking-[0.3em] uppercase text-primary">
               Advisory · Solutions · Staffing
             </span>
-          </div>
+          </div> */}
         </FadeIn>
 
         <FadeIn delay={0.1}>
